@@ -33,6 +33,10 @@
         scroller.active = true;
       });
 
+      beforeEach(function(done) {
+        Polymer.Base.async(done, 1000);
+      });
+
       afterEach(function(done) {
         Polymer.Base.async(done, 1000);
       });

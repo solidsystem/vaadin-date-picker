@@ -26,8 +26,11 @@
   </test-fixture>
 
   <script>
-    // iOS doesn't support arrow keys etc.
-    if (!ios) {
+    if (!android && !ios) {
+      // The test environment can currently only handle a certain number of tests
+      // on the Android emulator. Omitting the keyboard inputs tests on Android for now.
+      // iOS doesn't support arrow keys etc.
+
       describe('keyboard navigation', function() {
 
         var target;
@@ -301,10 +304,10 @@
 
             pageDown();
 
-            setTimeout(function() {
+            Polymer.Base.async(function() {
               expect(overlay.$.scroller.position).to.eql(initialPosition);
               done();
-            });
+            }, 1000);
           });
 
           it('should scroll down when focus goes invisible', function(done) {
