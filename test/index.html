@@ -14,18 +14,18 @@
     WCT._config.environmentScripts.push(shadow ? 'webcomponentsjs/webcomponents.js' : 'webcomponentsjs/webcomponents-lite.js');
 
     WCT.loadSuites([
-      'basic.html',
-      'dropdown.html',
+      // 'basic.html',
+      // 'dropdown.html',
       'overlay.html',
-      'month-calendar.html',
+      // 'month-calendar.html',
       'scroller.html',
-      'form-input.html',
-      'custom-input.html',
-      'keyboard-navigation.html',
-      'keyboard-input.html',
-      'late-upgrade.html',
-      'wai-aria.html',
-      'angular2.html'
+      // 'form-input.html',
+      // 'custom-input.html',
+      // 'keyboard-navigation.html',
+      // 'keyboard-input.html',
+      // 'late-upgrade.html',
+      // 'wai-aria.html',
+      // 'angular2.html'
     ].map(function(item) {
       return item + (shadow ? '?dom=shadow' : '');
     }));
